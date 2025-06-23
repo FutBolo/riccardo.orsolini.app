@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riccardo Orsolini - Bologna FC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+          colors: {
+            rossoBfc: '#d90000',
+            bluBfc: '#001f5c'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+  <!-- NAVIGATION -->
+  <nav class="bg-bluBfc text-white shadow-lg relative z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-2">
+          <img
+            src="{{ url_for('static', filename='images/orsolini.jpg') }}"
+            alt="Riccardo Orsolini"
+            class="w-8 h-8 rounded-full object-cover border-2 border-rossoBfc"
+          />
+          <span class="font-bold text-lg">Riccardo Orsolini</span>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-rossoBfc transition-colors duration-200 font-medium"
+            >Home</a
+          >
+          <a
+            href="#statistiche"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium"
+            >Statistiche</a
+          >
+          <a
+            href="#biografia"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium"
+            >Biografia</a
+          >
+          <a
+            href="/storico"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium"
+            >Storico</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col space-y-2">
+          <a
+            href="#home"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
+            >Home</a
+          >
+          <a
+            href="#statistiche"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
+            >Statistiche</a
+          >
+          <a
+            href="#biografia"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
+            >Biografia</a
+          >
+          <a
+            href="/storico"
+            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
+            >Storico</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header
+    id="home"
+    class="bg-gradient-to-r from-bluBfc to-blue-800 text-white py-16 text-center"
+  >
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Riccardo Orsolini</h1>
+      <p class="text-xl md:text-2xl font-light mb-2">Il figlio di Bologna</p>
+      <p class="text-lg opacity-90">Ala destra • Bologna FC 1909</p>
+      <div class="mt-8">
+        <span
+          class="inline-block bg-rossoBfc text-white px-6 py-2 rounded-full font-semibold"
+          >#Orsonaldo</span
+        >
+      </div>
+    </div>
+  </header>
+
+  <!-- STATISTICHE -->
+  <section id="statistiche" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-bluBfc mb-12"
+      >
+        Statistiche Carriera
+      </h2>
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+      >
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
+            class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-tshirt text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-bluBfc">272</p>
+          <p class="text-gray-600 font-medium">Presenze</p>
+        </div>
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
+            class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-futbol text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-bluBfc">69</p>
+          <p class="text-gray-600 font-medium">Gol</p>
+        </div>
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
+            class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-hands-helping text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-bluBfc">30</p>
+          <p class="text-gray-600 font-medium">Assist</p>
+        </div>
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
+            class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-running text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-bluBfc">273</p>
+          <p class="text-gray-600 font-medium">Dribbling riusciti</p>
+        </div>
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
+            class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-lightbulb text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-bluBfc">53</p>
+          <p class="text-gray-600 font-medium">Grandi Occasioni create</p>
+        </div>
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
+            class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-trophy text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-gray-500">1</p>
+          <p class="text-gray-600 font-medium">Trofei</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIOGRAFIA -->
+  <section id="biografia" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-bluBfc mb-12"
+      >
+        Chi è Riccardo Orsolini?
+      </h2>
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-xl font-semibold text-bluBfc mb-4">
+              Informazioni Personali
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <span class="font-medium text-gray-700 w-24">Nato:</span>
+                <span class="text-gray-900">24 gennaio 1997, Rotella (AP)</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium text-gray-700 w-24">Altezza:</span>
+                <span class="text-gray-900">183 cm</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium text-gray-700 w-24">Ruolo:</span>
+                <span class="text-gray-900">Ala destra / Esterno offensivo</span>
+              </div>
+              <div class="flex items-center">
+                <span class="font-medium text-gray-700 w-24">Piede:</span>
+                <span class="text-gray-900">Sinistro</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-bluBfc mb-4">Carriera</h3>
+            <div class="space-y-3">
+              <div class="border-l-4 border-rossoBfc pl-4">
+                <p class="font-semibold">2017-2019</p>
+                <p class="text-gray-700">Juventus (prestito Atalanta)</p>
+              </div>
+              <div class="border-l-4 border-rossoBfc pl-4">
+                <p class="font-semibold">2019-presente</p>
+                <p class="text-gray-700">Bologna FC 1909</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-200">
+          <p
+            class="text-lg text-gray-700 leading-relaxed text-center"
+          >
+            Nato nel 1997 a Rotella, è uno dei talenti più brillanti del Bologna FC. Mancino puro, letale sul dribbling e con un sinistro a giro che fa sognare i tifosi rossoblù. La sua velocità e creatività lo rendono uno degli esterni più pericolosi della Serie A.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-bluBfc text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="mb-4">
+        <div
+          class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-2"
+        >
+          <i class="fas fa-futbol text-white text-xl"></i>
+        </div>
+        <p class="text-lg font-semibold">Riccardo Orsolini</p>
+        <p class="text-gray-300">Bologna FC 1909</p>
+      </div>
+      <p class="text-gray-300">In onore di Orsonaldo da Fut_Bolo</p>
+    </div>
+  </footer>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
