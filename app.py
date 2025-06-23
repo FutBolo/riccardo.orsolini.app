@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key-for-orsolini-site")
 
 @app.route('/')
