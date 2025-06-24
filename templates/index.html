@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-</style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Riccardo Orsolini - Bologna FC</title>
@@ -22,14 +15,8 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script>
     tailwind.config = {
       theme: {
@@ -50,11 +37,7 @@
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between items-center py-4">
         <div class="flex items-center space-x-2">
-          <img
-            src="{{ url_for('static', filename='images/orsolini.jpg') }}"
-            alt="Riccardo Orsolini"
-            class="w-8 h-8 rounded-full object-cover border-2 border-rossoBfc"
-          />
+          <img src="{{ url_for('static', filename='images/orsolini.jpg') }}" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full object-cover border-2 border-rossoBfc" />
           <span class="font-bold text-lg">Riccardo Orsolini</span>
         </div>
 
@@ -65,69 +48,33 @@
 
         <!-- Desktop menu -->
         <div class="hidden md:flex space-x-8">
-          <a href="#home" class="hover:text-rossoBfc transition-colors duration-200 font-medium"
-            >Home</a
-          >
-          <a
-            href="#statistiche"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium"
-            >Statistiche</a
-          >
-          <a
-            href="#biografia"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium"
-            >Biografia</a
-          >
-          <a
-            href="/storico"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium"
-            >Storico</a
-          >
+          <a href="#home" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Home</a>
+          <a href="#statistiche" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Statistiche</a>
+          <a href="#biografia" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Biografia</a>
+          <a href="/storico" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Storico</a>
         </div>
       </div>
 
       <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden md:hidden pb-4">
         <div class="flex flex-col space-y-2">
-          <a
-            href="#home"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
-            >Home</a
-          >
-          <a
-            href="#statistiche"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
-            >Statistiche</a
-          >
-          <a
-            href="#biografia"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
-            >Biografia</a
-          >
-          <a
-            href="/storico"
-            class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2"
-            >Storico</a
-          >
+          <a href="#home" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Home</a>
+          <a href="#statistiche" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Statistiche</a>
+          <a href="#biografia" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Biografia</a>
+          <a href="/storico" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Storico</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- HEADER -->
-  <header
-    id="home"
-    class="bg-gradient-to-r from-bluBfc to-blue-800 text-white py-16 text-center"
-  >
+  <header id="home" class="bg-gradient-to-r from-bluBfc to-blue-800 text-white py-16 text-center">
     <div class="max-w-4xl mx-auto px-4">
       <h1 class="text-5xl md:text-6xl font-bold mb-4">Riccardo Orsolini</h1>
       <p class="text-xl md:text-2xl font-light mb-2">Il figlio di Bologna</p>
       <p class="text-lg opacity-90">Ala destra • Bologna FC 1909</p>
       <div class="mt-8">
-        <span
-          class="inline-block bg-rossoBfc text-white px-6 py-2 rounded-full font-semibold"
-          >#Orsonaldo</span
-        >
+        <span class="inline-block bg-rossoBfc text-white px-6 py-2 rounded-full font-semibold">#Orsonaldo</span>
       </div>
     </div>
   </header>
@@ -363,30 +310,20 @@
 
 <section class="py-12 bg-gray-100">
   
-</main>
-
   <!-- FOOTER -->
   <footer class="bg-bluBfc text-white w-full">
-  <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col items-center text-center">
-    
-    <!-- Icona -->
-    <div class="w-14 h-14 bg-rossoBfc rounded-full flex items-center justify-center mb-4">
-      <i class="fas fa-futbol text-white text-2xl"></i>
+    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col items-center text-center">
+      <div class="w-14 h-14 bg-rossoBfc rounded-full flex items-center justify-center mb-4">
+        <i class="fas fa-futbol text-white text-2xl"></i>
+      </div>
+      <h3 class="text-2xl font-bold">Riccardo Orsolini</h3>
+      <p class="text-gray-300 mb-4">Bologna FC 1909</p>
+      <a href="https://www.tiktok.com/@fut_bolo" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-rossoBfc transition-colors duration-200 text-sm font-medium mb-4">
+        <i class="fab fa-tiktok text-xl"></i> Seguimi su TikTok @fut_bolo
+      </a>
+      <p class="text-gray-400 italic text-sm">In onore di Orsonaldo da Fut_Bolo</p>
     </div>
+  </footer>
 
-    <!-- Nome e Squadra -->
-    <h3 class="text-2xl font-bold">Riccardo Orsolini</h3>
-    <p class="text-gray-300 mb-4">Bologna FC 1909</p>
-
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@fut_bolo" target="_blank"
-       class="inline-flex items-center gap-2 text-white hover:text-rossoBfc transition-colors duration-200 text-sm font-medium mb-4">
-      <i class="fab fa-tiktok text-xl"></i> Seguimi su TikTok @fut_bolo
-    </a>
-
-    <!-- Frase finale -->
-    <p class="text-gray-400 italic text-sm">In onore di Orsonaldo da Fut_Bolo</p>
-  </div>
-</footer>
 </body>
 </html>
