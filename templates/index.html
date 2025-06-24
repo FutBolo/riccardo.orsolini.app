@@ -195,6 +195,17 @@
           class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
         >
           <div
+            class="w-12 h-12 bg-rossoBfc rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <i class="fas fa-key text-white text-xl"></i>
+          </div>
+          <p class="text-2xl font-bold text-bluBfc">249</p>
+          <p class="text-gray-600 font-medium">Passaggi Chiave</p>
+        </div>
+        <div
+          class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        >
+          <div
             class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4"
           >
             <i class="fas fa-trophy text-white text-xl"></i>
@@ -205,6 +216,27 @@
       </div>
     </div>
   </section>
+
+    <!-- Immagine radar -->
+    <div class="md:w-1/2 w-full flex justify-center">
+      <img src="{{ url_for('static', filename='images/radar.png') }}" alt="Radar Opta" class="rounded-xl shadow-lg w-full max-w-md">
+    </div>
+    
+    <!-- Descrizione -->
+    <div class="md:w-1/2 w-full">
+      <h2 class="text-3xl font-bold text-bluBfc mb-4">Player Radar di Orsonaldo</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        I <strong>Player Radar</strong> di Opta sono una rappresentazione visiva di più metriche in un solo grafico, con ogni "spicchio" che mostra la forza relativa del giocatore in quella statistica. 
+        <br><br>
+        La distanza dallo zero indica il <strong>percentile</strong> del giocatore rispetto a un dataset di riferimento. 
+        <br><br>
+        Questo tipo di visualizzazione offre un rapido colpo d'occhio sullo stile e le attitudini del giocatore, evidenziando sia i parametri offensivi che difensivi.
+        <br><br>
+        Utilizzando questa tipologia di rappresentazione viene fuori che Orsolini ha caratteristiche molto simili a giocatori del calibro di Julian Alvarez e Omar Marmoush.
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- BIOGRAFIA -->
   <section id="biografia" class="py-16 bg-gray-50">
@@ -267,27 +299,6 @@
 <section class="py-12 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
     
-    <!-- Immagine radar -->
-    <div class="md:w-1/2 w-full flex justify-center">
-      <img src="{{ url_for('static', filename='images/radar.png') }}" alt="Radar Opta" class="rounded-xl shadow-lg w-full max-w-md">
-    </div>
-    
-    <!-- Descrizione -->
-    <div class="md:w-1/2 w-full">
-      <h2 class="text-3xl font-bold text-bluBfc mb-4">Player Radar di Orsonaldo</h2>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        I <strong>Player Radar</strong> di Opta sono una rappresentazione visiva di più metriche in un solo grafico, con ogni "spicchio" che mostra la forza relativa del giocatore in quella statistica. 
-        <br><br>
-        La distanza dallo zero indica il <strong>percentile</strong> del giocatore rispetto a un dataset di riferimento. 
-        <br><br>
-        Questo tipo di visualizzazione offre un rapido colpo d'occhio sullo stile e le attitudini del giocatore, evidenziando sia i parametri offensivi che difensivi.
-        <br><br>
-        Utilizzando questa tipologia di rappresentazione viene fuori che Orsolini ha caratteristiche molto simili a giocatori del calibro di Julian Alvarez e Omar Marmoush.
-      </p>
-    </div>
-  </div>
-</section>
-
   <!-- FOOTER -->
   <footer class="bg-bluBfc text-white py-8">
     <div class="max-w-6xl mx-auto px-4 text-center">
