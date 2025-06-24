@@ -46,7 +46,7 @@
         <a href="#home" class="hover:text-rossoBfc">Home</a>
         <a href="#statistiche" class="hover:text-rossoBfc">Statistiche</a>
         <a href="#biografia" class="hover:text-rossoBfc">Biografia</a>
-        <a href="/storico" class="hover:text-rossoBfc">Storico</a>
+        <a href="#storico" class="hover:text-rossoBfc">Storico</a>
       </div>
     </div>
   </nav>
@@ -60,7 +60,8 @@
     </div>
   </header>
 
-  <!-- STATISTICHE -->
+  <main>
+   <!-- STATISTICHE -->
   <section id="statistiche" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h2
@@ -207,88 +208,72 @@
     </div>
   </section>
 
-    <section class="py-12 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-
-  <!-- RADAR OPTA -->
-  <section class="py-12 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-      <div class="md:w-1/2 w-full flex justify-center">
-        <img src="static/images/radar.png" alt="Radar Opta" class="rounded-xl shadow-lg w-full max-w-md">
-      </div>
-      <div class="md:w-1/2 w-full">
-        <h2 class="text-3xl font-bold text-bluBfc mb-4">Player Radar Opta</h2>
-        <p class="text-gray-700 text-lg">
-          Le <strong>Player Radars</strong> di Opta sono una rappresentazione visiva di più metriche in un solo grafico...
-        </p>
-      </div>
-    </div>
-  </section>
-
- <section class="py-12 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-
-  <!-- BIOGRAFIA -->
-  <section id="biografia" class="py-16 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2
-        class="text-3xl md:text-4xl font-bold text-center text-bluBfc mb-12"
-      >
-        Chi è Riccardo Orsolini?
-      </h2>
-      <div class="bg-white rounded-2xl p-8 shadow-lg">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 class="text-xl font-semibold text-bluBfc mb-4">
-              Informazioni Personali
-            </h3>
-            <div class="space-y-3">
-              <div class="flex items-center">
-                <span class="font-medium text-gray-700 w-24">Nato:</span>
-                <span class="text-gray-900">24 gennaio 1997, Rotella (AP)</span>
-              </div>
-              <div class="flex items-center">
-                <span class="font-medium text-gray-700 w-24">Altezza:</span>
-                <span class="text-gray-900">183 cm</span>
-              </div>
-              <div class="flex items-center">
-                <span class="font-medium text-gray-700 w-24">Ruolo:</span>
-                <span class="text-gray-900">Ala destra / Esterno offensivo</span>
-              </div>
-              <div class="flex items-center">
-                <span class="font-medium text-gray-700 w-24">Piede:</span>
-                <span class="text-gray-900">Sinistro</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-bluBfc mb-4">Carriera</h3>
-            <div class="space-y-3">
-              <div class="border-l-4 border-rossoBfc pl-4">
-                <p class="font-semibold">2017-2019</p>
-                <p class="text-gray-700">Juventus (prestito Atalanta)</p>
-              </div>
-              <div class="border-l-4 border-rossoBfc pl-4">
-                <p class="font-semibold">2019-presente</p>
-                <p class="text-gray-700">Bologna FC 1909</p>
-              </div>
-            </div>
-          </div>
+    <!-- RADAR OPTA -->
+    <section id="radar" class="py-12 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2 w-full flex justify-center">
+          <img src="static/images/radar.png" alt="Radar Opta" class="rounded-xl shadow-lg w-full max-w-md" />
         </div>
-        <div class="mt-8 pt-8 border-t border-gray-200">
-          <p
-            class="text-lg text-gray-700 leading-relaxed text-center"
-          >
-            Nato nel 1997 a Rotella, è uno dei talenti più brillanti del Bologna FC. Mancino puro, letale sul dribbling e con un sinistro a giro che fa sognare i tifosi rossoblù. La sua velocità e creatività lo rendono uno degli esterni più pericolosi della Serie A.
+        <div class="md:w-1/2 w-full">
+          <h2 class="text-3xl font-bold text-bluBfc mb-4">Player Radar Opta</h2>
+          <p class="text-gray-700 text-lg">
+            Le <strong>Player Radars</strong> di Opta sono una rappresentazione visiva di più metriche in un solo grafico...
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
- <section class="py-12 bg-gray-100">
-  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-  
+    <!-- BIOGRAFIA -->
+    <section id="biografia" class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-bluBfc mb-12">Chi è Riccardo Orsolini?</h2>
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-xl font-semibold text-bluBfc mb-4">Informazioni Personali</h3>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="font-medium text-gray-700 w-24">Nato:</span>
+                  <span class="text-gray-900">24 gennaio 1997, Rotella (AP)</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="font-medium text-gray-700 w-24">Altezza:</span>
+                  <span class="text-gray-900">183 cm</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="font-medium text-gray-700 w-24">Ruolo:</span>
+                  <span class="text-gray-900">Ala destra / Esterno offensivo</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="font-medium text-gray-700 w-24">Piede:</span>
+                  <span class="text-gray-900">Sinistro</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-bluBfc mb-4">Carriera</h3>
+              <div class="space-y-3">
+                <div class="border-l-4 border-rossoBfc pl-4">
+                  <p class="font-semibold">2017–2019</p>
+                  <p class="text-gray-700">Juventus (prestito Atalanta)</p>
+                </div>
+                <div class="border-l-4 border-rossoBfc pl-4">
+                  <p class="font-semibold">2019–presente</p>
+                  <p class="text-gray-700">Bologna FC 1909</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <p class="text-lg text-gray-700 leading-relaxed text-center">
+              Nato nel 1997 a Rotella, è uno dei talenti più brillanti del Bologna FC...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <!-- FOOTER -->
   <footer class="bg-bluBfc text-white w-full">
     <div class="max-w-6xl mx-auto px-4 py-10 text-center">
