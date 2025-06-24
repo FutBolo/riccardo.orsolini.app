@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Riccardo Orsolini - Bologna FC</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMHPMGPR98"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,9 +14,11 @@
     gtag('config', 'G-NMHPMGPR98');
   </script>
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <script>
     tailwind.config = {
       theme: {
@@ -31,51 +33,30 @@
     }
   </script>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900 flex flex-col min-h-screen">
-  <!-- NAVIGATION -->
-  <nav class="bg-bluBfc text-white shadow-lg relative z-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <div class="flex items-center space-x-2">
-          <img src="{{ url_for<img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" ... /> }}" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full object-cover border-2 border-rossoBfc" />
-          <span class="font-bold text-lg">Riccardo Orsolini</span>
-        </div>
+<body class="bg-gray-50 font-sans text-gray-900">
 
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-
-        <!-- Desktop menu -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#home" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Home</a>
-          <a href="#statistiche" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Statistiche</a>
-          <a href="#biografia" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Biografia</a>
-          <a href="/storico" class="hover:text-rossoBfc transition-colors duration-200 font-medium">Storico</a>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="bg-bluBfc text-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-rossoBfc" />
+        <span class="font-bold text-lg">Riccardo Orsolini</span>
       </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <div class="flex flex-col space-y-2">
-          <a href="#home" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Home</a>
-          <a href="#statistiche" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Statistiche</a>
-          <a href="#biografia" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Biografia</a>
-          <a href="/storico" class="hover:text-rossoBfc transition-colors duration-200 font-medium py-2">Storico</a>
-        </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-rossoBfc">Home</a>
+        <a href="#statistiche" class="hover:text-rossoBfc">Statistiche</a>
+        <a href="#biografia" class="hover:text-rossoBfc">Biografia</a>
+        <a href="/storico" class="hover:text-rossoBfc">Storico</a>
       </div>
     </div>
   </nav>
 
   <!-- HEADER -->
   <header id="home" class="bg-gradient-to-r from-bluBfc to-blue-800 text-white py-16 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">Riccardo Orsolini</h1>
-      <p class="text-xl md:text-2xl font-light mb-2">Il figlio di Bologna</p>
-      <p class="text-lg opacity-90">Ala destra • Bologna FC 1909</p>
-      <div class="mt-8">
-        <span class="inline-block bg-rossoBfc text-white px-6 py-2 rounded-full font-semibold">#Orsonaldo</span>
-      </div>
+    <h1 class="text-5xl font-bold mb-4">Riccardo Orsolini</h1>
+    <p class="text-xl">Il figlio di Bologna</p>
+    <div class="mt-4">
+      <span class="inline-block bg-rossoBfc px-6 py-2 rounded-full font-semibold">#Orsonaldo</span>
     </div>
   </header>
 
@@ -228,27 +209,21 @@
 
     <section class="py-12 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-    
-    <!-- Immagine radar -->
-    <div class="md:w-1/2 w-full flex justify-center">
-      <img src="{{ url_for<img src="static/images/radar.png" alt="Radar Opta" ... /> }}" alt="Radar Opta" class="rounded-xl shadow-lg w-full max-w-md">
+
+  <!-- RADAR OPTA -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 w-full flex justify-center">
+        <img src="static/images/radar.png" alt="Radar Opta" class="rounded-xl shadow-lg w-full max-w-md">
+      </div>
+      <div class="md:w-1/2 w-full">
+        <h2 class="text-3xl font-bold text-bluBfc mb-4">Player Radar Opta</h2>
+        <p class="text-gray-700 text-lg">
+          Le <strong>Player Radars</strong> di Opta sono una rappresentazione visiva di più metriche in un solo grafico...
+        </p>
+      </div>
     </div>
-    
-    <!-- Descrizione -->
-    <div class="md:w-1/2 w-full">
-      <h2 class="text-3xl font-bold text-bluBfc mb-4">Player Radar Opta</h2>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        Le <strong>Player Radars</strong> di Opta sono una rappresentazione visiva di più metriche in un solo grafico, con ogni "spicchio" che mostra la forza relativa del giocatore in quella statistica. 
-        <br><br>
-        La distanza dallo zero indica il <strong>percentile</strong> del giocatore rispetto a un dataset di riferimento. 
-        <br><br>
-        Questo tipo di visualizzazione offre un rapido colpo d'occhio sullo stile e le attitudini del giocatore, evidenziando sia i parametri offensivi che difensivi.
-        <br><br>
-        Da questa tipologia di grafico è possibile notare che Orsolini ha caratteristiche molto simili a giocatori del calibro di Julian Alvarez e Omar Marmoush.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- BIOGRAFIA -->
   <section id="biografia" class="py-16 bg-gray-50">
@@ -312,16 +287,18 @@
   
   <!-- FOOTER -->
   <footer class="bg-bluBfc text-white w-full">
-    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col items-center text-center">
-      <div class="w-14 h-14 bg-rossoBfc rounded-full flex items-center justify-center mb-4">
-        <i class="fas fa-futbol text-white text-2xl"></i>
+    <div class="max-w-6xl mx-auto px-4 py-10 text-center">
+      <div class="mb-4">
+        <div class="w-14 h-14 bg-rossoBfc rounded-full flex items-center justify-center mx-auto">
+          <i class="fas fa-futbol text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mt-3">Riccardo Orsolini</h3>
+        <p class="text-gray-300">Bologna FC 1909</p>
       </div>
-      <h3 class="text-2xl font-bold">Riccardo Orsolini</h3>
-      <p class="text-gray-300 mb-4">Bologna FC 1909</p>
-      <a href="https://www.tiktok.com/@fut_bolo" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-rossoBfc transition-colors duration-200 text-sm font-medium mb-4">
+      <a href="https://www.tiktok.com/@fut_bolo" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-rossoBfc">
         <i class="fab fa-tiktok text-xl"></i> Seguimi su TikTok @fut_bolo
       </a>
-      <p class="text-gray-400 italic text-sm">In onore di Orsonaldo da Fut_Bolo</p>
+      <p class="text-gray-400 italic text-sm mt-4">In onore di Orsonaldo da Fut_Bolo</p>
     </div>
   </footer>
 
