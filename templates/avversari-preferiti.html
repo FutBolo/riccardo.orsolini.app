@@ -8,11 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body { font-family: 'Montserrat', sans-serif; background: #f9fafb; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
+  <!-- Navbar -->
   <nav class="bg-[#001f5c] text-white">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
@@ -23,28 +26,48 @@
         <a href="/" class="hover:text-[#d90000]">Home</a>
         <a href="storico" class="hover:text-[#d90000]">Storico</a>
         <a href="big-match" class="hover:text-[#d90000]">Big Match</a>
-        <a href="avversari-preferiti" class="hover:text-[#d90000] font-semibold">Avversari Preferiti</a>
+        <a href="avversari-preferiti" class="text-[#d90000] font-semibold">Avversari Preferiti</a>
       </div>
     </div>
   </nav>
 
-  <main class="max-w-4xl mx-auto p-6">
-    <h1 class="text-4xl font-bold text-[#001f5c] mb-6 text-center">Avversari Preferiti di Orsonaldo</h1>
-    
-    <section class="bg-white rounded-xl shadow-md p-6">
-      <p class="mb-4 text-lg">
-        Scopri gli avversari contro cui Riccardo Orsolini ha mostrato le sue migliori qualità, giocatori o squadre che ha affrontato con particolare successo.
-      </p>
+  <!-- Intestazione -->
+  <header class="text-center bg-gradient-to-r from-red-700 to-[#d90000] text-white py-12">
+    <h1 class="text-4xl md:text-5xl font-bold">Avversari Preferiti</h1>
+    <p class="text-lg mt-2">Le squadre contro cui Orsolini si scatena</p>
+  </header>
 
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>AC Milan</strong> – Prestazioni sempre di alto livello contro questo storico avversario.</li>
-        <li><strong>Napoli</strong> – Gol e assist importanti nelle sfide contro il Napoli.</li>
-        <li><strong>Fiorentina</strong> – Alcune partite indimenticabili.</li>
-        <!-- aggiungi altri avversari qui -->
-      </ul>
-    </section>
+  <!-- Contenuto -->
+  <main class="max-w-5xl mx-auto p-6 grid gap-6">
+    <p class="text-lg text-center mb-6 text-gray-700">
+      Ecco le squadre contro cui Riccardo ha spesso lasciato il segno con gol, assist e giocate decisive.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Card Avversario -->
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Juventus</h3>
+        <p>2 gol e 1 assist – una delle sue vittime preferite.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Sampdoria</h3>
+        <p>Prestazioni sempre decisive: 3 gol in 4 partite.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Roma</h3>
+        <p>Giocate da fuoriclasse: 1 gol, 2 assist, tante magie.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Verona</h3>
+        <p>Contro l’Hellas non perdona: media gol impressionante.</p>
+      </div>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#001f5c] text-white py-8 text-center mt-12">
     <p>© 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati</p>
   </footer>
