@@ -1,9 +1,0 @@
-{
-  "clean_urls": true,
-  "routes": {
-    "/": "/index.html",
-    "/storico": "/storico.html",
-    "/big-match": "/big-match.html",
-    "/avversari-preferiti": "/avversari-preferiti.html"
-  }
-}
