@@ -8,12 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body { font-family: 'Montserrat', sans-serif; background: #f9fafb; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-  <!-- Navbar (puoi duplicare o fare include con template in futuro) -->
+  <!-- Navbar -->
   <nav class="bg-[#001f5c] text-white">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
@@ -23,29 +25,47 @@
       <div class="hidden md:flex space-x-8">
         <a href="/" class="hover:text-[#d90000]">Home</a>
         <a href="storico" class="hover:text-[#d90000]">Storico</a>
-        <a href="big-match" class="hover:text-[#d90000] font-semibold">Big Match</a>
+        <a href="big-match" class="text-[#d90000] font-semibold underline">Big Match</a>
         <a href="avversari-preferiti" class="hover:text-[#d90000]">Avversari Preferiti</a>
       </div>
     </div>
   </nav>
 
-  <main class="max-w-4xl mx-auto p-6">
-    <h1 class="text-4xl font-bold text-[#001f5c] mb-6 text-center">Big Match di Riccardo Orsolini</h1>
-    
-    <section class="bg-white rounded-xl shadow-md p-6">
-      <p class="mb-4 text-lg">
-        Qui trovi una selezione dei migliori match giocati da Riccardo Orsolini, partite decisive in cui ha fatto la differenza con prestazioni memorabili.
-      </p>
+  <!-- Intestazione -->
+  <header class="text-center bg-gradient-to-r from-[#001f5c] to-blue-900 text-white py-12">
+    <h1 class="text-4xl md:text-5xl font-bold">I Grandi Match di Orsolini</h1>
+    <p class="text-lg mt-2">Quando conta, lui c'è.</p>
+  </header>
 
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Bologna vs Juventus (2021)</strong> – Gol decisivo al 90', partita emozionante.</li>
-        <li><strong>Bologna vs Inter (2020)</strong> – Assist perfetto e grande prestazione.</li>
-        <li><strong>Bologna vs Napoli (2019)</strong> – Dribbling e gol spettacolare.</li>
-        <!-- aggiungi altri match qui -->
-      </ul>
-    </section>
+  <!-- Contenuto -->
+  <main class="max-w-5xl mx-auto p-6 grid gap-6">
+    <p class="text-lg text-center mb-6 text-gray-700">
+      Selezione delle partite più memorabili in cui Orsolini ha lasciato il segno con giocate decisive.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Card Match -->
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#001f5c] mb-2">Bologna vs Juventus (2021)</h3>
+        <p>Gol decisivo al 90', partita da vero leader.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#001f5c] mb-2">Bologna vs Inter (2020)</h3>
+        <p>Assist perfetto e prestazione dominante.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
+        <h3 class="text-xl font-semibold text-[#001f5c] mb-2">Bologna vs Napoli (2019)</h3>
+        <p>Dribbling ubriacanti e gol spettacolare.</p>
+      </div>
+
+      <!-- Altri match -->
+      <!-- <div class="...">Altro match</div> -->
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#001f5c] text-white py-8 text-center mt-12">
     <p>© 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati</p>
   </footer>
