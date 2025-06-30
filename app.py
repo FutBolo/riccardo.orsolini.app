@@ -12,5 +12,13 @@ def index():
 def storico():
     return render_template('storico.html')
 
+@app.route('/big-match.html')
+def big_match():
+    return render_template('big-match.html')
+
+@app.route('/avversari-preferiti.html')
+def avversari_preferiti():
+    return render_template('avversari-preferiti.html')
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
