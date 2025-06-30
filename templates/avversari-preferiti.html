@@ -7,79 +7,46 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
-          colors: {
-            rossoBfc: '#d90000',
-            bluBfc: '#001f5c'
-          }
-        }
-      }
-    }
-  </script>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background: #f9fafb; }
+  </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- NAVBAR -->
-  <nav class="bg-bluBfc text-white">
+  <nav class="bg-[#001f5c] text-white">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
-        <img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-rossoBfc" />
+        <img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-[#d90000]" />
         <span class="font-bold text-lg">Riccardo Orsolini</span>
       </div>
       <div class="hidden md:flex space-x-8">
-        <a href="index.html" class="hover:text-rossoBfc">Home</a>
-        <a href="bigmatch.html" class="hover:text-rossoBfc">Big Match</a>
-        <a href="#avversari" class="hover:text-rossoBfc font-semibold">Avversari Preferiti</a>
+        <a href="index.html" class="hover:text-[#d90000]">Home</a>
+        <a href="storico.html" class="hover:text-[#d90000]">Storico</a>
+        <a href="big-match.html" class="hover:text-[#d90000]">Big Match</a>
+        <a href="avversari-preferiti.html" class="hover:text-[#d90000] font-semibold">Avversari Preferiti</a>
       </div>
     </div>
   </nav>
 
-  <!-- HEADER -->
-  <header class="bg-gradient-to-r from-bluBfc to-blue-800 text-white py-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Avversari Preferiti di Riccardo Orsolini</h1>
-    <p class="text-xl max-w-xl mx-auto">Le squadre e i giocatori contro cui si è espresso meglio</p>
-  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-4xl font-bold text-[#001f5c] mb-6 text-center">Avversari Preferiti di Orsonaldo</h1>
+    
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <p class="mb-4 text-lg">
+        Scopri gli avversari contro cui Riccardo Orsolini ha mostrato le sue migliori qualità, giocatori o squadre che ha affrontato con particolare successo.
+      </p>
 
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <section id="avversari" class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-        <img src="static/images/inter.png" alt="Inter" class="mx-auto mb-4 w-20 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-bluBfc mb-2">Inter</h3>
-        <p class="text-gray-700">Orsolini ha segnato 4 gol contro questa squadra, con una media voto di 7.8.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-        <img src="static/images/napoli.png" alt="Napoli" class="mx-auto mb-4 w-20 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-bluBfc mb-2">Napoli</h3>
-        <p class="text-gray-700">Ottime prestazioni con 3 assist e diversi dribbling riusciti.</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-        <img src="static/images/juventus.png" alt="Juventus" class="mx-auto mb-4 w-20 h-20 object-contain" />
-        <h3 class="text-xl font-bold text-bluBfc mb-2">Juventus</h3>
-        <p class="text-gray-700">Performance memorabili e gol importanti contro la Vecchia Signora.</p>
-      </div>
-      <!-- Aggiungi altri avversari -->
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>AC Milan</strong> – Prestazioni sempre di alto livello contro questo storico avversario.</li>
+        <li><strong>Napoli</strong> – Gol e assist importanti nelle sfide contro il Napoli.</li>
+        <li><strong>Fiorentina</strong> – Alcune partite indimenticabili.</li>
+        <!-- aggiungi altri avversari qui -->
+      </ul>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-bluBfc text-white w-full">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-center">
-      <div class="mb-4">
-        <div class="w-14 h-14 bg-rossoBfc rounded-full flex items-center justify-center mx-auto">
-          <i class="fas fa-futbol text-white text-2xl"></i>
-        </div>
-        <h3 class="text-2xl font-bold mt-3">Riccardo Orsolini</h3>
-        <p class="text-gray-300">Bologna FC 1909</p>
-      </div>
-      <a href="https://www.tiktok.com/@fut_bolo" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-rossoBfc">
-        <i class="fab fa-tiktok text-xl"></i> Seguimi su TikTok @fut_bolo
-      </a>
-      <p class="text-gray-400 italic text-sm mt-4">In onore di Orsonaldo da Fut_Bolo</p>
-    </div>
+  <footer class="bg-[#001f5c] text-white py-8 text-center mt-12">
+    <p>© 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati</p>
   </footer>
 
 </body>

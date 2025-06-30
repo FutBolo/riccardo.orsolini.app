@@ -7,90 +7,47 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
-          colors: {
-            rossoBfc: '#d90000',
-            bluBfc: '#001f5c'
-          }
-        }
-      }
-    }
-  </script>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background: #f9fafb; }
+  </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- NAVBAR -->
-  <nav class="bg-bluBfc text-white">
+  <!-- Navbar (puoi duplicare o fare include con template in futuro) -->
+  <nav class="bg-[#001f5c] text-white">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
-        <img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-rossoBfc" />
+        <img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-[#d90000]" />
         <span class="font-bold text-lg">Riccardo Orsolini</span>
       </div>
       <div class="hidden md:flex space-x-8">
-        <a href="index.html" class="hover:text-rossoBfc">Home</a>
-        <a href="#bigmatch" class="hover:text-rossoBfc font-semibold">Big Match</a>
-        <a href="avversari.html" class="hover:text-rossoBfc">Avversari Preferiti</a>
+        <a href="index.html" class="hover:text-[#d90000]">Home</a>
+        <a href="storico.html" class="hover:text-[#d90000]">Storico</a>
+        <a href="big-match.html" class="hover:text-[#d90000] font-semibold">Big Match</a>
+        <a href="avversari-preferiti.html" class="hover:text-[#d90000]">Avversari Preferiti</a>
       </div>
     </div>
   </nav>
 
-  <!-- HEADER -->
-  <header class="bg-gradient-to-r from-bluBfc to-blue-800 text-white py-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Big Match di Riccardo Orsolini</h1>
-    <p class="text-xl max-w-xl mx-auto">Le prestazioni più memorabili in partite importanti</p>
-  </header>
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-4xl font-bold text-[#001f5c] mb-6 text-center">Big Match di Riccardo Orsolini</h1>
+    
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <p class="mb-4 text-lg">
+        Qui trovi una selezione dei migliori match giocati da Riccardo Orsolini, partite decisive in cui ha fatto la differenza con prestazioni memorabili.
+      </p>
 
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <section id="bigmatch" class="grid md:grid-cols-2 gap-8">
-      <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-bold text-bluBfc mb-2">Bologna vs Juventus - 3 Feb 2023</h2>
-        <p class="text-gray-700 mb-4">
-          Partita decisiva in Serie A, Orsolini ha segnato una doppietta e fornito un assist.
-        </p>
-        <ul class="list-disc list-inside text-gray-600">
-          <li>Gol: 2</li>
-          <li>Assist: 1</li>
-          <li>Dribbling riusciti: 5</li>
-          <li>Man of the Match</li>
-        </ul>
-      </article>
-
-      <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
-        <h2 class="text-2xl font-bold text-bluBfc mb-2">Bologna vs Inter - 10 Dic 2022</h2>
-        <p class="text-gray-700 mb-4">
-          Prestazione di grande intensità con un gol decisivo nel finale.
-        </p>
-        <ul class="list-disc list-inside text-gray-600">
-          <li>Gol: 1</li>
-          <li>Passaggi chiave: 4</li>
-          <li>Dribbling riusciti: 3</li>
-          <li>Voto: 8.5</li>
-        </ul>
-      </article>
-
-      <!-- Aggiungi altri match importanti qui -->
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Bologna vs Juventus (2021)</strong> – Gol decisivo al 90', partita emozionante.</li>
+        <li><strong>Bologna vs Inter (2020)</strong> – Assist perfetto e grande prestazione.</li>
+        <li><strong>Bologna vs Napoli (2019)</strong> – Dribbling e gol spettacolare.</li>
+        <!-- aggiungi altri match qui -->
+      </ul>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-bluBfc text-white w-full">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-center">
-      <div class="mb-4">
-        <div class="w-14 h-14 bg-rossoBfc rounded-full flex items-center justify-center mx-auto">
-          <i class="fas fa-futbol text-white text-2xl"></i>
-        </div>
-        <h3 class="text-2xl font-bold mt-3">Riccardo Orsolini</h3>
-        <p class="text-gray-300">Bologna FC 1909</p>
-      </div>
-      <a href="https://www.tiktok.com/@fut_bolo" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-rossoBfc">
-        <i class="fab fa-tiktok text-xl"></i> Seguimi su TikTok @fut_bolo
-      </a>
-      <p class="text-gray-400 italic text-sm mt-4">In onore di Orsonaldo da Fut_Bolo</p>
-    </div>
+  <footer class="bg-[#001f5c] text-white py-8 text-center mt-12">
+    <p>© 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati</p>
   </footer>
 
 </body>
