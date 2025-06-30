@@ -12,11 +12,11 @@ def index():
 def storico():
     return render_template('storico.html')
 
-@app.route('/big-match.html')
+@app.route('/big-match')
 def big_match():
     return render_template('big-match.html')
 
-@app.route('/avversari-preferiti.html')
+@app.route('/avversari-preferiti')
 def avversari_preferiti():
     return render_template('avversari-preferiti.html')
     
