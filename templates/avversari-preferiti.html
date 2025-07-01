@@ -5,22 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Avversari Preferiti - Riccardo Orsolini</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Montserrat', sans-serif; }
+    .sortable:hover { cursor: pointer; text-decoration: underline; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
+  <!-- Navbar -->
+  <nav class="bg-[#001f5c] text-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="/static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-[#d90000]" />
+        <span class="font-bold text-lg">Riccardo Orsolini</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="/" class="hover:text-[#d90000]">Home</a>
+        <a href="/storico" class="hover:text-[#d90000]">Storico</a>
+        <a href="/big-match" class="hover:text-[#d90000]">Big Match</a>
+        <a href="/avversari-preferiti" class="hover:text-[#d90000] font-semibold">Avversari Preferiti</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Header -->
-  <header class="text-center py-10 bg-white border-b border-gray-200 shadow-sm">
-    <h1 class="text-4xl font-bold text-[#001f5c]">Avversari Preferiti</h1>
-    <p class="text-gray-600 mt-2 text-lg">Le squadre contro cui Orsolini ha lasciato il segno</p>
+  <header class="text-center py-10 bg-[#001f5c] text-white shadow-sm">
+    <h1 class="text-4xl font-bold">Avversari Preferiti</h1>
+    <p class="text-gray-200 mt-2 text-lg">Le squadre contro cui Orsolini ha lasciato il segno</p>
   </header>
 
+  <!-- Ordinamento -->
+  <div class="max-w-5xl mx-auto px-4 py-4 flex justify-end">
+    <label class="mr-2 text-sm font-medium text-gray-700">Ordina per:</label>
+    <select id="sortSelect" class="text-sm px-3 py-1 rounded border-gray-300 shadow-sm">
+      <option value="goals">Gol</option>
+      <option value="assists">Assist</option>
+      <option value="total">Gol + Assist</option>
+      <option value="average">Media G+A</option>
+    </select>
+  </div>
+
   <!-- Tabella -->
-  <main class="max-w-5xl mx-auto px-4 py-10">
+  <main class="max-w-5xl mx-auto px-4 pb-10">
     <div class="overflow-x-auto">
-      <table class="w-full text-left table-auto border-separate border-spacing-y-2">
+      <table id="statsTable" class="w-full text-left table-auto border-separate border-spacing-y-2">
         <thead class="text-sm text-gray-500">
           <tr>
             <th class="px-4 py-2">#</th>
@@ -31,49 +60,68 @@
             <th>Media G+A</th>
           </tr>
         </thead>
-        <tbody class="text-base text-gray-800">
-          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
-            <td class="px-4 py-3">1</td>
-            <td>Verona</td>
-            <td class="text-[#d90000] font-semibold">4</td>
-            <td class="text-[#d90000] font-semibold">2</td>
-            <td>5</td>
-            <td>1.20</td>
-          </tr>
-          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
-            <td class="px-4 py-3">2</td>
-            <td>Sampdoria</td>
-            <td class="text-[#d90000] font-semibold">3</td>
-            <td class="text-[#d90000] font-semibold">1</td>
-            <td>4</td>
-            <td>1.00</td>
-          </tr>
-          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
-            <td class="px-4 py-3">3</td>
-            <td>Juventus</td>
-            <td class="text-[#d90000] font-semibold">2</td>
-            <td class="text-[#d90000] font-semibold">0</td>
-            <td>5</td>
-            <td>0.40</td>
-          </tr>
-          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
-            <td class="px-4 py-3">4</td>
-            <td>Roma</td>
-            <td class="text-[#d90000] font-semibold">1</td>
-            <td class="text-[#d90000] font-semibold">1</td>
-            <td>3</td>
-            <td>0.67</td>
-          </tr>
-          <!-- altri avversari qui -->
+        <tbody class="text-base text-gray-800" id="tableBody">
+          <!-- Le righe saranno generate dinamicamente -->
         </tbody>
       </table>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
-    © 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati
+  <footer class="bg-[#001f5c] text-white py-8 text-center mt-12">
+    <p>© 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati</p>
   </footer>
+
+  <!-- Script JS -->
+  <script>
+    const data = [
+      { opponent: 'Verona', goals: 4, assists: 2, apps: 5 },
+      { opponent: 'Sampdoria', goals: 3, assists: 1, apps: 4 },
+      { opponent: 'Juventus', goals: 2, assists: 0, apps: 5 },
+      { opponent: 'Roma', goals: 1, assists: 1, apps: 3 },
+      { opponent: 'Lazio', goals: 2, assists: 2, apps: 6 },
+      { opponent: 'Milan', goals: 1, assists: 0, apps: 4 }
+    ];
+
+    function renderTable(sortBy = 'goals') {
+      const tbody = document.getElementById('tableBody');
+      const sorted = [...data].sort((a, b) => {
+        const aTotal = a.goals + a.assists;
+        const bTotal = b.goals + b.assists;
+        const aAvg = aTotal / a.apps;
+        const bAvg = bTotal / b.apps;
+
+        switch (sortBy) {
+          case 'goals': return b.goals - a.goals;
+          case 'assists': return b.assists - a.assists;
+          case 'total': return bTotal - aTotal;
+          case 'average': return bAvg - aAvg;
+        }
+      });
+
+      tbody.innerHTML = '';
+      sorted.forEach((row, idx) => {
+        const total = row.goals + row.assists;
+        const avg = (total / row.apps).toFixed(2);
+        tbody.innerHTML += `
+          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
+            <td class="px-4 py-3">${idx + 1}</td>
+            <td>${row.opponent}</td>
+            <td class="text-[#d90000] font-semibold">${row.goals}</td>
+            <td class="text-[#d90000] font-semibold">${row.assists}</td>
+            <td>${row.apps}</td>
+            <td>${avg}</td>
+          </tr>`;
+      });
+    }
+
+    document.getElementById('sortSelect').addEventListener('change', e => {
+      renderTable(e.target.value);
+    });
+
+    // Inizializza la tabella
+    renderTable();
+  </script>
 
 </body>
 </html>
