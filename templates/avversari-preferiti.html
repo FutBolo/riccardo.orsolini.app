@@ -9,65 +9,70 @@
     body { font-family: 'Montserrat', sans-serif; }
   </style>
 </head>
-<body class="bg-[#0a0a0a] text-white">
+<body class="bg-gray-50 text-gray-900">
 
   <!-- Header -->
-  <header class="text-center py-10 bg-[#121212] border-b border-gray-700">
-    <h1 class="text-3xl md:text-4xl font-bold text-[#d90000]">Avversari Preferiti</h1>
-    <p class="text-gray-400 mt-2">I club contro cui Orsolini ha brillato di più</p>
+  <header class="text-center py-10 bg-white border-b border-gray-200 shadow-sm">
+    <h1 class="text-4xl font-bold text-[#001f5c]">Avversari Preferiti</h1>
+    <p class="text-gray-600 mt-2 text-lg">Le squadre contro cui Orsolini ha lasciato il segno</p>
   </header>
 
-  <!-- Table -->
-  <main class="max-w-3xl mx-auto px-4 py-10">
+  <!-- Tabella -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
     <div class="overflow-x-auto">
-      <table class="w-full table-auto border-separate border-spacing-y-2">
-        <thead class="text-left text-gray-400 text-sm">
+      <table class="w-full text-left table-auto border-separate border-spacing-y-2">
+        <thead class="text-sm text-gray-500">
           <tr>
-            <th class="px-4">#</th>
+            <th class="px-4 py-2">#</th>
             <th>Avversario</th>
-            <th>Gol</th>
+            <th class="text-[#d90000]">Gol</th>
+            <th class="text-[#d90000]">Assist</th>
             <th>Presenze</th>
-            <th>Media</th>
+            <th>Media G+A</th>
           </tr>
         </thead>
-        <tbody class="text-white">
-          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+        <tbody class="text-base text-gray-800">
+          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
             <td class="px-4 py-3">1</td>
-            <td>Juventus</td>
+            <td>Verona</td>
+            <td class="text-[#d90000] font-semibold">4</td>
             <td class="text-[#d90000] font-semibold">2</td>
             <td>5</td>
-            <td>0.40</td>
+            <td>1.20</td>
           </tr>
-          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
             <td class="px-4 py-3">2</td>
             <td>Sampdoria</td>
             <td class="text-[#d90000] font-semibold">3</td>
+            <td class="text-[#d90000] font-semibold">1</td>
             <td>4</td>
-            <td>0.75</td>
+            <td>1.00</td>
           </tr>
-          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
             <td class="px-4 py-3">3</td>
+            <td>Juventus</td>
+            <td class="text-[#d90000] font-semibold">2</td>
+            <td class="text-[#d90000] font-semibold">0</td>
+            <td>5</td>
+            <td>0.40</td>
+          </tr>
+          <tr class="bg-white rounded-lg shadow-sm hover:bg-gray-100 transition">
+            <td class="px-4 py-3">4</td>
             <td>Roma</td>
             <td class="text-[#d90000] font-semibold">1</td>
+            <td class="text-[#d90000] font-semibold">1</td>
             <td>3</td>
-            <td>0.33</td>
+            <td>0.67</td>
           </tr>
-          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
-            <td class="px-4 py-3">4</td>
-            <td>Verona</td>
-            <td class="text-[#d90000] font-semibold">4</td>
-            <td>5</td>
-            <td>0.80</td>
-          </tr>
-          <!-- aggiungi altri avversari qui -->
+          <!-- altri avversari qui -->
         </tbody>
       </table>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#121212] text-gray-400 text-center py-6 border-t border-gray-700">
-    © 2025 Riccardo Orsolini Fanpage
+  <footer class="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+    © 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati
   </footer>
 
 </body>
