@@ -5,71 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Avversari Preferiti - Riccardo Orsolini</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
+    body { font-family: 'Montserrat', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-[#0a0a0a] text-white">
 
-  <!-- Navbar -->
-  <nav class="bg-[#001f5c] text-white">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="static/images/orsolini.jpg" alt="Riccardo Orsolini" class="w-8 h-8 rounded-full border-2 border-[#d90000]" />
-        <span class="font-bold text-lg">Riccardo Orsolini</span>
-      </div>
-      <div class="hidden md:flex space-x-8">
-        <a href="/" class="hover:text-[#d90000]">Home</a>
-        <a href="storico" class="hover:text-[#d90000]">Storico</a>
-        <a href="big-match" class="hover:text-[#d90000]">Big Match</a>
-        <a href="avversari-preferiti" class="text-[#d90000] font-semibold">Avversari Preferiti</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Intestazione -->
-  <header class="text-center bg-gradient-to-r from-red-700 to-[#d90000] text-white py-12">
-    <h1 class="text-4xl md:text-5xl font-bold">Avversari Preferiti</h1>
-    <p class="text-lg mt-2">Le squadre contro cui Orsolini si scatena</p>
+  <!-- Header -->
+  <header class="text-center py-10 bg-[#121212] border-b border-gray-700">
+    <h1 class="text-3xl md:text-4xl font-bold text-[#d90000]">Avversari Preferiti</h1>
+    <p class="text-gray-400 mt-2">I club contro cui Orsolini ha brillato di più</p>
   </header>
 
-  <!-- Contenuto -->
-  <main class="max-w-5xl mx-auto p-6 grid gap-6">
-    <p class="text-lg text-center mb-6 text-gray-700">
-      Ecco le squadre contro cui Riccardo ha spesso lasciato il segno con gol, assist e giocate decisive.
-    </p>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Card Avversario -->
-      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
-        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Juventus</h3>
-        <p>2 gol e 1 assist – una delle sue vittime preferite.</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
-        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Sampdoria</h3>
-        <p>Prestazioni sempre decisive: 3 gol in 4 partite.</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
-        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Roma</h3>
-        <p>Giocate da fuoriclasse: 1 gol, 2 assist, tante magie.</p>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-md p-5 transition hover:scale-105 hover:shadow-xl">
-        <h3 class="text-xl font-semibold text-[#d90000] mb-2">Verona</h3>
-        <p>Contro l’Hellas non perdona: media gol impressionante.</p>
-      </div>
+  <!-- Table -->
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <div class="overflow-x-auto">
+      <table class="w-full table-auto border-separate border-spacing-y-2">
+        <thead class="text-left text-gray-400 text-sm">
+          <tr>
+            <th class="px-4">#</th>
+            <th>Avversario</th>
+            <th>Gol</th>
+            <th>Presenze</th>
+            <th>Media</th>
+          </tr>
+        </thead>
+        <tbody class="text-white">
+          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+            <td class="px-4 py-3">1</td>
+            <td>Juventus</td>
+            <td class="text-[#d90000] font-semibold">2</td>
+            <td>5</td>
+            <td>0.40</td>
+          </tr>
+          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+            <td class="px-4 py-3">2</td>
+            <td>Sampdoria</td>
+            <td class="text-[#d90000] font-semibold">3</td>
+            <td>4</td>
+            <td>0.75</td>
+          </tr>
+          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+            <td class="px-4 py-3">3</td>
+            <td>Roma</td>
+            <td class="text-[#d90000] font-semibold">1</td>
+            <td>3</td>
+            <td>0.33</td>
+          </tr>
+          <tr class="bg-[#1c1c1c] hover:bg-[#2a2a2a] transition">
+            <td class="px-4 py-3">4</td>
+            <td>Verona</td>
+            <td class="text-[#d90000] font-semibold">4</td>
+            <td>5</td>
+            <td>0.80</td>
+          </tr>
+          <!-- aggiungi altri avversari qui -->
+        </tbody>
+      </table>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#001f5c] text-white py-8 text-center mt-12">
-    <p>© 2025 Riccardo Orsolini Fanpage - Tutti i diritti riservati</p>
+  <footer class="bg-[#121212] text-gray-400 text-center py-6 border-t border-gray-700">
+    © 2025 Riccardo Orsolini Fanpage
   </footer>
 
 </body>
